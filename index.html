@@ -13,13 +13,29 @@ p{margin-top:1.25rem;font-size:clamp(1.05rem,2.5vw,1.3rem);color:#aab3c5;line-he
 a{color:#7dd3fc;text-decoration:none;border-bottom:1px solid rgba(125,211,252,.4)}
 a:hover{border-bottom-color:#7dd3fc}
 .contact{margin-top:2.5rem;font-size:1rem;color:#7c869a}
+form{margin:2rem auto 0;display:grid;gap:.8rem;text-align:left;max-width:460px}
+label{font-size:.85rem;color:#aab3c5}
+input,textarea{width:100%;margin-top:.3rem;padding:.75rem .9rem;border-radius:10px;border:1px solid #2a3344;background:#121722;color:#e6e9ef;font:inherit}
+input:focus,textarea:focus{outline:none;border-color:#7dd3fc}
+button{margin-top:.4rem;padding:.8rem;border:0;border-radius:10px;font:inherit;font-weight:600;color:#0b0e14;background:linear-gradient(90deg,#7dd3fc,#a78bfa);cursor:pointer}
+h2{margin-top:2.5rem;font-size:1.3rem;color:#e6e9ef}
 </style>
 </head>
 <body>
 <main>
 <h1>Remote Recon</h1>
 <p>Our new website is coming soon.</p>
-<p class="contact">Contact us: <a href="mailto:hello@remoterecon.ca">hello@remoterecon.ca</a></p>
+<h2>Contact us</h2>
+<form action="https://formsubmit.co/hello@remoterecon.ca" method="POST">
+<input type="hidden" name="_subject" value="New message from remoterecon.ca">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_honey" style="display:none">
+<label>Name<input type="text" name="name" required></label>
+<label>Email<input type="email" name="email" required></label>
+<label>Message<textarea name="message" rows="5" required></textarea></label>
+<button type="submit">Send message</button>
+</form>
+<p class="contact">Or email us at <a href="mailto:hello@remoterecon.ca">hello@remoterecon.ca</a></p>
 </main>
 </body>
 </html>
